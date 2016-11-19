@@ -1,5 +1,2 @@
-##  AWS Account Information  ##
-
-  variable "tf_provider_aws_region"     {description  = "AWS Region     "}
-  variable "tf_provider_aws_access_key" {decscription = "AWS Access Key "}
-  variable "tf_provider_aws_secret_key" {description  = "AWS Secret Key "}
+variable "selected_aws_region"                      { type = "string" }
+variable "selected_aws_region_subnets_public_count" { type = "map" }

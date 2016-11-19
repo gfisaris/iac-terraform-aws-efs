@@ -1,10 +1,10 @@
-resource "aws_efs_file_system" "ecs_common" {
-  creation_token = "ecs_common"
+resource "aws_efs_file_system" "master" {
+  creation_token = "${data.terraform_remote_state.project.name}"
 
   tags {
-    Name = "ecs_common"
+    Name = "${data.terraform_remote_state.project.name}"
   }
 
 }
 
-output "filesystem_ecs_common_id"   {value = "${aws_efs_file_system.ecs_common.id}"}
+output "filesystem_master_id"   {value = "${aws_efs_file_system.master.id}"}
