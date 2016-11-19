@@ -40,7 +40,6 @@ data "terraform_remote_state" "aws_ec2_alb" {
   }
 }
 
-
 data "terraform_remote_state" "aws_ecs" {
   backend = "local"
   config {
